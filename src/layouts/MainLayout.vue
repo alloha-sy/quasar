@@ -137,7 +137,7 @@ const users = ref([
 const menuListFilter = computed(() => {
   return user.value.access !== 'Secretary'
     ? menuList.value.filter((menuItem) => menuItem.label !== 'Secretary')
-    : menuList.value;
+    : menuList.value.filter((menuItem) => menuItem.label !== 'ChatRoom');
 });
 
 const logInCheck = () => {
